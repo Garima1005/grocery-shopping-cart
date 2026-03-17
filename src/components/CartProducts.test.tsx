@@ -76,7 +76,7 @@ describe('CartProducts', () => {
     await user.click(plus)
 
     expect(dispatchMock).toHaveBeenCalledTimes(1)
-    expect(dispatchMock).toHaveBeenCalledWith(addToCart({ id: 2, name: 'Milk', price: 0.5, quantity: 1 }))
+    expect(dispatchMock).toHaveBeenCalledWith(addToCart({ id: 2, name: 'Milk', price: 0.5 }))
   })
 
   it('does not dispatch decrement when quantity is 0', async () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import ProductsCard from '../components/ProductsCard'
 import { products } from '../data/products'
 import { BsCart3 } from "react-icons/bs";
@@ -8,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
-  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalQuantity = cartItems?.length;
 
   const navigate = useNavigate();
 
